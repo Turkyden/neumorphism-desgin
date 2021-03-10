@@ -69,7 +69,7 @@ body {
     margin: -50px -58px 0;
     padding: 100px 0;
     text-align: center;
-    background-color: #f5f6f8;
+    background-color: #e0e0e0;
 
     @media @mobile {
       margin: -16px -16px 0;
@@ -87,7 +87,8 @@ body {
       font-size: 48px;
       font-weight: 600;
       line-height: 56px;
-      color: #080e29;
+      color: @c-text;
+      text-shadow: @text-shadow;
 
       + div {
         margin: 16px 0 32px;
@@ -103,15 +104,18 @@ body {
       margin-right: 16px;
       padding: 0 32px;
       height: 44px;
-      color: @c-primary;
+      color: @c-secondary;
       font-size: 16px;
       background: transparent;
-      border: 1px solid @c-primary;
-      border-radius: 22px;
       box-sizing: border-box;
       cursor: pointer;
       outline: none;
       transition: all 0.3s;
+      border: none;
+      border-radius: 22px;
+      text-shadow: @text-shadow;
+      background: linear-gradient(145deg, #f0f0f0, #cacaca);
+      box-shadow: 14px 14px 28px #bebebe, -14px -14px 28px #ffffff;
 
       &:hover {
         opacity: 0.8;
@@ -124,8 +128,8 @@ body {
 
     a:last-child button {
       margin-right: 0;
-      color: #fff;
-      background: @c-primary;
+      color: @c-secondary;
+      background: linear-gradient(145deg, #f0f0f0, #cacaca);
     }
   }
 
@@ -137,9 +141,9 @@ body {
     padding: 72px 0;
     &-item {
       height: 256px;
-      border-radius: 150px;
-      background: #e0e0e0;
-      box-shadow: 24px 24px 47px #bebebe, -24px -24px 47px #ffffff;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #f0f0f0, #cacaca);
+      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -231,8 +235,6 @@ body {
     max-height: calc(90vh - 80px);
     margin: 0;
     padding: 0 24px 0 0;
-    background-color: #fff;
-    box-shadow: 0 0 16px 16px #fff;
     box-sizing: content-box;
     overflow: auto;
 
